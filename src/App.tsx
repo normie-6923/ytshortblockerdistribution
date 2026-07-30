@@ -213,50 +213,38 @@ export default function App() {
   const [isModalOpen, setIsModalOpen] = useState(false);
 
   return (
-    <div className="min-h-screen bg-slate-950 text-slate-200 font-sans selection:bg-red-500/30 selection:text-red-200">
-      {/* Background Gradients */}
-      <div className="fixed inset-0 overflow-hidden pointer-events-none z-0">
-        <div className="absolute top-[-10%] left-[-10%] w-[40%] h-[40%] rounded-full bg-red-600/10 blur-[120px]" />
-        <div className="absolute bottom-[-10%] right-[-10%] w-[40%] h-[40%] rounded-full bg-sky-600/10 blur-[120px]" />
-      </div>
-
+    <div className="min-h-screen bg-black text-neutral-300 font-sans selection:bg-neutral-800 selection:text-white">
       {/* Hero Section */}
-      <header className="relative z-10 container mx-auto px-4 pt-12 pb-12 md:px-6 md:pt-24 md:pb-16 flex flex-col items-center text-center">
-        <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-slate-900/50 border border-slate-800 text-xs sm:text-sm font-medium text-slate-300 mb-6 md:mb-8 backdrop-blur-sm">
-          <ShieldCheck size={16} className="text-red-500" />
-          <span>100% Free & Open Source</span>
-        </div>
-        
+      <header className="relative z-10 container mx-auto px-4 pt-16 pb-12 md:px-6 md:pt-32 md:pb-24 flex flex-col items-center text-center">
         <h1 className="text-4xl sm:text-5xl md:text-7xl font-extrabold tracking-tight text-white mb-4 md:mb-6">
-          Take Back Your <span className="text-transparent bg-clip-text bg-gradient-to-r from-red-500 to-rose-400">Attention</span>
+          Take Back Your Attention
         </h1>
         
-        <p className="text-base sm:text-lg md:text-xl text-slate-400 max-w-2xl mb-10 md:mb-12 leading-relaxed px-2">
+        <p className="text-base sm:text-lg md:text-xl text-neutral-400 max-w-2xl mb-10 md:mb-12 leading-relaxed px-2">
           CleanTube is a completely distraction-free, ad-free wrapper that actively hides Shorts and video ads. Focus on what you want to watch.
         </p>
 
         {/* Interactive Mockup */}
         <div 
-          className="relative group cursor-pointer transition-all duration-500 hover:scale-105"
+          className="relative group cursor-pointer transition-transform duration-300 hover:-translate-y-2"
           onClick={() => setIsModalOpen(true)}
         >
-          <div className="absolute -inset-1 bg-gradient-to-r from-red-500 to-sky-500 rounded-[2.5rem] blur opacity-25 group-hover:opacity-50 transition duration-500" />
-          <div className="relative bg-slate-900 border-[8px] border-slate-800 rounded-[2.5rem] w-64 h-[540px] sm:w-72 sm:h-[600px] overflow-hidden shadow-2xl flex flex-col items-center justify-center">
+          <div className="relative bg-black border border-neutral-800 rounded-[2.5rem] w-64 h-[540px] sm:w-72 sm:h-[600px] overflow-hidden shadow-xl flex flex-col items-center justify-center">
             {/* Phone Notch */}
-            <div className="absolute top-0 w-32 h-6 bg-slate-800 rounded-b-3xl z-20" />
+            <div className="absolute top-0 w-32 h-6 bg-neutral-900 rounded-b-3xl z-20" />
             
             {/* Mockup Screen Content */}
-            <div className="absolute inset-0 bg-[#0f0f0f] flex flex-col z-10">
+            <div className="absolute inset-0 bg-black flex flex-col z-10">
               <div className="flex-1 flex flex-col items-center justify-center text-center px-6 gap-6">
-                 <div className="w-16 h-16 rounded-2xl bg-gradient-to-br from-red-500 to-rose-600 flex items-center justify-center shadow-lg shadow-red-500/20">
+                 <div className="w-16 h-16 rounded-2xl bg-neutral-900 flex items-center justify-center border border-neutral-800">
                    <Smartphone size={32} className="text-white" />
                  </div>
                  <div>
                    <h3 className="text-2xl font-bold text-white mb-2">CleanTube</h3>
-                   <p className="text-sm text-slate-400">Zero Ads. Zero Shorts.<br/>100% Focus.</p>
+                   <p className="text-sm text-neutral-400">Zero Ads. Zero Shorts.<br/>100% Focus.</p>
                  </div>
                  
-                 <div className="mt-4 px-6 py-3 rounded-full bg-red-500/10 text-red-400 font-medium text-sm flex items-center gap-2 group-hover:bg-red-500 group-hover:text-white transition-colors duration-300">
+                 <div className="mt-4 px-6 py-3 rounded-full bg-white text-black font-medium text-sm flex items-center gap-2 hover:bg-neutral-200 transition-colors duration-300">
                     <Download size={16} />
                     Click to Download
                  </div>
@@ -267,28 +255,28 @@ export default function App() {
       </header>
 
       {/* Features Grid */}
-      <section className="relative z-10 container mx-auto px-4 sm:px-6 py-16 md:py-20 border-t border-slate-800/50">
+      <section className="relative z-10 container mx-auto px-4 sm:px-6 py-16 md:py-24 border-t border-neutral-900">
         <div className="grid md:grid-cols-3 gap-8">
-          <div className="p-6 rounded-3xl bg-slate-900/50 border border-slate-800 backdrop-blur-sm">
-            <div className="w-12 h-12 rounded-xl bg-red-500/10 flex items-center justify-center mb-6">
-              <ShieldCheck className="text-red-500" size={24} />
+          <div className="p-6 md:p-8 rounded-3xl bg-black border border-neutral-800">
+            <div className="w-12 h-12 rounded-xl bg-neutral-900 border border-neutral-800 flex items-center justify-center mb-6">
+              <ShieldCheck className="text-white" size={24} />
             </div>
             <h3 className="text-xl font-bold text-white mb-3">No More Ads</h3>
-            <p className="text-slate-400">Instantly bypass unskippable video ads and completely hide visual banner ads on the platform.</p>
+            <p className="text-neutral-400 leading-relaxed">Instantly bypass unskippable video ads and completely hide visual banner ads on the platform.</p>
           </div>
-          <div className="p-6 rounded-3xl bg-slate-900/50 border border-slate-800 backdrop-blur-sm">
-            <div className="w-12 h-12 rounded-xl bg-sky-500/10 flex items-center justify-center mb-6">
-              <Zap className="text-sky-400" size={24} />
+          <div className="p-6 md:p-8 rounded-3xl bg-black border border-neutral-800">
+            <div className="w-12 h-12 rounded-xl bg-neutral-900 border border-neutral-800 flex items-center justify-center mb-6">
+              <Zap className="text-white" size={24} />
             </div>
             <h3 className="text-xl font-bold text-white mb-3">Shorts Eradicated</h3>
-            <p className="text-slate-400">Actively removes the Shorts shelf, bottom navigation button, and redirects direct Shorts links to the normal player.</p>
+            <p className="text-neutral-400 leading-relaxed">Actively removes the Shorts shelf, bottom navigation button, and redirects direct Shorts links to the normal player.</p>
           </div>
-          <div className="p-6 rounded-3xl bg-slate-900/50 border border-slate-800 backdrop-blur-sm">
-            <div className="w-12 h-12 rounded-xl bg-emerald-500/10 flex items-center justify-center mb-6">
-              <Code2 className="text-emerald-400" size={24} />
+          <div className="p-6 md:p-8 rounded-3xl bg-black border border-neutral-800">
+            <div className="w-12 h-12 rounded-xl bg-neutral-900 border border-neutral-800 flex items-center justify-center mb-6">
+              <Code2 className="text-white" size={24} />
             </div>
             <h3 className="text-xl font-bold text-white mb-3">Open Source</h3>
-            <p className="text-slate-400">Build it yourself or inspect the code. No telemetry, no tracking, just a clean wrapper.</p>
+            <p className="text-neutral-400 leading-relaxed">Build it yourself or inspect the code. No telemetry, no tracking, just a clean wrapper.</p>
           </div>
         </div>
       </section>
@@ -303,22 +291,22 @@ export default function App() {
 
           <div className="space-y-12">
             {/* Step 1 */}
-            <div className="bg-slate-900 rounded-3xl border border-slate-800 overflow-hidden">
-              <div className="p-6 md:p-8 border-b border-slate-800">
+            <div className="bg-black rounded-3xl border border-neutral-800 overflow-hidden">
+              <div className="p-6 md:p-8 border-b border-neutral-800">
                 <h3 className="text-2xl font-bold text-white mb-4">Step 1: The React Native Shell</h3>
-                <p className="text-slate-400 leading-relaxed mb-6">Create a fresh Expo project and install the necessary dependencies that allow the app to act as a web browser and control device orientation.</p>
-                <div className="bg-[#0d1117] rounded-xl p-4 overflow-x-auto">
-                  <pre className="text-sm text-slate-300 font-mono">
+                <p className="text-neutral-400 leading-relaxed mb-6">Create a fresh Expo project and install the necessary dependencies that allow the app to act as a web browser and control device orientation.</p>
+                <div className="bg-neutral-900 rounded-xl p-4 overflow-x-auto">
+                  <pre className="text-sm text-neutral-300 font-mono">
 <code>{`npx create-expo-app@latest cleantube
 cd cleantube
 npx expo install react-native-webview expo-screen-orientation react-native-safe-area-context`}</code>
                   </pre>
                 </div>
               </div>
-              <div className="p-6 md:p-8 bg-slate-900/50">
-                <p className="text-slate-400 leading-relaxed mb-6">Before building, configure your <code className="text-sky-400 bg-sky-400/10 px-1.5 py-0.5 rounded">app.json</code> package name and icon settings. Place a square icon.png (1024x1024) in your assets folder.</p>
-                <div className="bg-[#0d1117] rounded-xl p-4 overflow-x-auto">
-                  <pre className="text-sm text-slate-300 font-mono">
+              <div className="p-6 md:p-8 bg-neutral-950">
+                <p className="text-neutral-400 leading-relaxed mb-6">Before building, configure your <code className="text-white bg-neutral-800 px-1.5 py-0.5 rounded">app.json</code> package name and icon settings. Place a square icon.png (1024x1024) in your assets folder.</p>
+                <div className="bg-neutral-900 rounded-xl p-4 overflow-x-auto">
+                  <pre className="text-sm text-neutral-300 font-mono">
 <code>{`{
   "expo": {
     "name": "CleanTube",
@@ -340,12 +328,12 @@ npx expo install react-native-webview expo-screen-orientation react-native-safe-
             </div>
 
             {/* Step 2 */}
-            <div className="bg-slate-900 rounded-3xl border border-slate-800 overflow-hidden">
+            <div className="bg-black rounded-3xl border border-neutral-800 overflow-hidden">
               <div className="p-6 md:p-8">
                 <h3 className="text-2xl font-bold text-white mb-4">Step 2: The JavaScript Assassin</h3>
-                <p className="text-slate-400 leading-relaxed mb-6">This is the magic. Replace the contents of your <code className="text-sky-400 bg-sky-400/10 px-1.5 py-0.5 rounded">src/app/index.tsx</code> (or <code className="text-sky-400 bg-sky-400/10 px-1.5 py-0.5 rounded">App.tsx</code>) with this code. It injects custom JavaScript to strip out ads and Shorts.</p>
-                <div className="bg-[#0d1117] rounded-xl p-4 overflow-x-auto max-h-[500px]">
-                  <pre className="text-sm text-slate-300 font-mono">
+                <p className="text-neutral-400 leading-relaxed mb-6">This is the magic. Replace the contents of your <code className="text-white bg-neutral-800 px-1.5 py-0.5 rounded">src/app/index.tsx</code> (or <code className="text-white bg-neutral-800 px-1.5 py-0.5 rounded">App.tsx</code>) with this code. It injects custom JavaScript to strip out ads and Shorts.</p>
+                <div className="bg-neutral-900 rounded-xl p-4 overflow-x-auto max-h-[500px]">
+                  <pre className="text-sm text-neutral-300 font-mono">
 <code>{reactNativeCode}</code>
                   </pre>
                 </div>
@@ -353,22 +341,22 @@ npx expo install react-native-webview expo-screen-orientation react-native-safe-
             </div>
 
             {/* Step 3 */}
-            <div className="bg-slate-900 rounded-3xl border border-slate-800 overflow-hidden">
-              <div className="p-6 md:p-8 border-b border-slate-800">
+            <div className="bg-black rounded-3xl border border-neutral-800 overflow-hidden">
+              <div className="p-6 md:p-8 border-b border-neutral-800">
                 <h3 className="text-2xl font-bold text-white mb-4">Step 3: Compiling the APK</h3>
-                <p className="text-slate-400 leading-relaxed mb-6">Install Expo's EAS CLI globally and log in. Then configure your cloud build settings.</p>
-                <div className="bg-[#0d1117] rounded-xl p-4 overflow-x-auto">
-                  <pre className="text-sm text-slate-300 font-mono">
+                <p className="text-neutral-400 leading-relaxed mb-6">Install Expo's EAS CLI globally and log in. Then configure your cloud build settings.</p>
+                <div className="bg-neutral-900 rounded-xl p-4 overflow-x-auto">
+                  <pre className="text-sm text-neutral-300 font-mono">
 <code>{`npm install -g eas-cli
 eas login
 eas build:configure`}</code>
                   </pre>
                 </div>
               </div>
-              <div className="p-6 md:p-8 bg-slate-900/50">
-                <p className="text-slate-400 leading-relaxed mb-6">Update the newly generated <code className="text-sky-400 bg-sky-400/10 px-1.5 py-0.5 rounded">eas.json</code> file to build an APK instead of an AAB for direct distribution.</p>
-                <div className="bg-[#0d1117] rounded-xl p-4 overflow-x-auto mb-6">
-                  <pre className="text-sm text-slate-300 font-mono">
+              <div className="p-6 md:p-8 bg-neutral-950">
+                <p className="text-neutral-400 leading-relaxed mb-6">Update the newly generated <code className="text-white bg-neutral-800 px-1.5 py-0.5 rounded">eas.json</code> file to build an APK instead of an AAB for direct distribution.</p>
+                <div className="bg-neutral-900 rounded-xl p-4 overflow-x-auto mb-6">
+                  <pre className="text-sm text-neutral-300 font-mono">
 <code>{`{
   "cli": {
     "version": ">= 3.0.0"
@@ -392,17 +380,17 @@ eas build:configure`}</code>
 }`}</code>
                   </pre>
                 </div>
-                <p className="text-slate-400 leading-relaxed mb-6">Finally, send the app to the build queue!</p>
-                <div className="bg-[#0d1117] rounded-xl p-4 overflow-x-auto">
-                  <pre className="text-sm text-slate-300 font-mono">
+                <p className="text-neutral-400 leading-relaxed mb-6">Finally, send the app to the build queue!</p>
+                <div className="bg-neutral-900 rounded-xl p-4 overflow-x-auto">
+                  <pre className="text-sm text-neutral-300 font-mono">
 <code>eas build -p android --profile preview</code>
                   </pre>
                 </div>
-                <div className="mt-6 p-4 rounded-xl bg-slate-800/50 border border-slate-700">
-                  <ul className="text-sm text-slate-400 space-y-2 list-disc list-inside">
+                <div className="mt-6 p-4 rounded-xl bg-neutral-900/50 border border-neutral-800">
+                  <ul className="text-sm text-neutral-400 space-y-2 list-disc list-inside">
                     <li>EAS will ask if you want to generate a new Android Keystore. Press <strong>Y (Yes)</strong>.</li>
                     <li>The terminal will upload your project and provide a URL to watch the build progress.</li>
-                    <li>Once finished (usually 10-15 minutes), you'll get a direct download link for your <strong className="text-slate-200">CleanTube.apk</strong>!</li>
+                    <li>Once finished (usually 10-15 minutes), you'll get a direct download link for your <strong className="text-neutral-200">CleanTube.apk</strong>!</li>
                   </ul>
                 </div>
               </div>
@@ -412,12 +400,12 @@ eas build:configure`}</code>
       </section>
 
       {/* Footer */}
-      <footer className="relative z-10 border-t border-slate-800/50 bg-slate-950 py-12">
+      <footer className="relative z-10 border-t border-neutral-900 bg-black py-12">
         <div className="container mx-auto px-6 text-center">
-          <p className="text-slate-500 text-sm max-w-2xl mx-auto">
+          <p className="text-neutral-500 text-sm max-w-2xl mx-auto">
             Disclaimer: CleanTube is an independent, open-source educational project. It is not affiliated, associated, authorized, endorsed by, or in any way officially connected with Google LLC, YouTube, or any of its subsidiaries or its affiliates.
           </p>
-          <p className="text-slate-600 text-sm mt-4">
+          <p className="text-neutral-600 text-sm mt-4">
             &copy; {new Date().getFullYear()} CleanTube. All rights reserved.
           </p>
         </div>
@@ -427,33 +415,33 @@ eas build:configure`}</code>
       {isModalOpen && (
         <div className="fixed inset-0 z-50 flex items-center justify-center p-4">
           <div 
-            className="absolute inset-0 bg-black/60 backdrop-blur-md transition-opacity"
+            className="absolute inset-0 bg-black/80 backdrop-blur-sm transition-opacity"
             onClick={() => setIsModalOpen(false)}
           />
           
-          <div className="relative w-full max-w-md bg-slate-900 border border-slate-800 rounded-3xl shadow-2xl p-6 sm:p-8 overflow-hidden transform transition-all animate-in zoom-in-95 duration-200">
+          <div className="relative w-full max-w-md bg-black border border-neutral-800 rounded-3xl shadow-2xl p-6 sm:p-8 overflow-hidden transform transition-all animate-in zoom-in-95 duration-200">
             {/* Modal close button */}
             <button 
               onClick={() => setIsModalOpen(false)}
-              className="absolute top-3 right-3 sm:top-4 sm:right-4 text-slate-400 hover:text-white transition-colors p-2 rounded-full hover:bg-slate-800"
+              className="absolute top-3 right-3 sm:top-4 sm:right-4 text-neutral-400 hover:text-white transition-colors p-2 rounded-full hover:bg-neutral-900"
             >
               <X size={20} />
             </button>
 
             <div className="flex flex-col items-center text-center mt-4">
-              <div className="w-16 h-16 bg-red-500/10 rounded-2xl flex items-center justify-center mb-6 border border-red-500/20">
-                <Download size={32} className="text-red-500" />
+              <div className="w-16 h-16 bg-neutral-900 rounded-2xl flex items-center justify-center mb-6 border border-neutral-800">
+                <Download size={32} className="text-white" />
               </div>
               
               <h2 className="text-2xl font-bold text-white mb-2">Get CleanTube</h2>
-              <p className="text-slate-400 mb-8">
+              <p className="text-neutral-400 mb-8">
                 Download the latest APK for your Android device or support the development.
               </p>
 
               <div className="flex flex-col w-full gap-4">
                 <a 
                   href="https://github.com/normie-6923/ytshortblockerdistribution/releases/download/v1.0.0/app-release.apk"
-                  className="flex items-center justify-center gap-3 w-full bg-red-600 hover:bg-red-700 text-white font-medium py-4 px-6 rounded-2xl transition-all duration-300 hover:scale-[1.02] active:scale-[0.98] shadow-lg shadow-red-600/20"
+                  className="flex items-center justify-center gap-3 w-full bg-white text-black hover:bg-neutral-200 font-medium py-4 px-6 rounded-2xl transition-all duration-300 hover:-translate-y-1"
                 >
                   <Download size={20} />
                   Download APK
@@ -463,9 +451,9 @@ eas build:configure`}</code>
                   href="#" // Placeholder for Cashfree link
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="flex items-center justify-center gap-3 w-full bg-slate-800 hover:bg-slate-700 text-white font-medium py-4 px-6 rounded-2xl transition-all duration-300 hover:scale-[1.02] active:scale-[0.98]"
+                  className="flex items-center justify-center gap-3 w-full bg-neutral-900 hover:bg-neutral-800 text-white font-medium py-4 px-6 rounded-2xl transition-all duration-300 hover:-translate-y-1 border border-neutral-800"
                 >
-                  <Coffee size={20} className="text-amber-400" />
+                  <Coffee size={20} className="text-white" />
                   Buy me a Coffee
                 </a>
               </div>
