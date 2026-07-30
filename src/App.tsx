@@ -255,39 +255,12 @@ export default function App() {
         </div>
       </header>
 
-      {/* Features Grid */}
-      <section className="relative z-10 container mx-auto px-4 sm:px-6 py-16 md:py-24 border-t border-neutral-900">
-        <div className="grid md:grid-cols-3 gap-8">
-          <div className="p-6 md:p-8 rounded-3xl bg-black border border-neutral-800">
-            <div className="w-12 h-12 rounded-xl bg-neutral-900 border border-neutral-800 flex items-center justify-center mb-6">
-              <ShieldCheck className="text-white" size={24} />
-            </div>
-            <h3 className="text-xl font-bold text-white mb-3">No More Ads</h3>
-            <p className="text-neutral-400 leading-relaxed">Instantly bypass unskippable video ads and completely hide visual banner ads on the platform.</p>
-          </div>
-          <div className="p-6 md:p-8 rounded-3xl bg-black border border-neutral-800">
-            <div className="w-12 h-12 rounded-xl bg-neutral-900 border border-neutral-800 flex items-center justify-center mb-6">
-              <Zap className="text-white" size={24} />
-            </div>
-            <h3 className="text-xl font-bold text-white mb-3">Shorts Eradicated</h3>
-            <p className="text-neutral-400 leading-relaxed">Actively removes the Shorts shelf, bottom navigation button, and redirects direct Shorts links to the normal player.</p>
-          </div>
-          <div className="p-6 md:p-8 rounded-3xl bg-black border border-neutral-800">
-            <div className="w-12 h-12 rounded-xl bg-neutral-900 border border-neutral-800 flex items-center justify-center mb-6">
-              <Code2 className="text-white" size={24} />
-            </div>
-            <h3 className="text-xl font-bold text-white mb-3">Open Source</h3>
-            <p className="text-neutral-400 leading-relaxed">Build it yourself or inspect the code. No telemetry, no tracking, just a clean wrapper.</p>
-          </div>
-        </div>
-      </section>
-
       {/* DIY Guide Section */}
-      <section className="relative z-10 container mx-auto px-4 sm:px-6 py-16 md:py-24 border-t border-slate-800/50">
+      <section className="relative z-10 container mx-auto px-4 sm:px-6 py-16 md:py-24 border-t border-neutral-900">
         <div className="max-w-4xl mx-auto">
           <div className="text-center mb-12 md:mb-16">
             <h2 className="text-3xl md:text-5xl font-bold text-white mb-4 md:mb-6">DIY: How to Build It</h2>
-            <p className="text-base md:text-lg text-slate-400">Don't want to use our pre-built APK? You can build it yourself in the cloud using Expo Application Services (EAS). No Android Studio required.</p>
+            <p className="text-base md:text-lg text-neutral-400">Don't want to use our pre-built APK? You can build it yourself in the cloud using Expo Application Services (EAS). No Android Studio required.</p>
           </div>
 
           <div className="space-y-12">
