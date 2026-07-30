@@ -211,6 +211,7 @@ const styles = StyleSheet.create({
 
 export default function App() {
   const [isModalOpen, setIsModalOpen] = useState(false);
+  const [isDonateModalOpen, setIsDonateModalOpen] = useState(false);
 
   return (
     <div className="min-h-screen bg-black text-neutral-300 font-sans selection:bg-neutral-800 selection:text-white">
@@ -447,14 +448,59 @@ eas build:configure`}</code>
                   Download APK
                 </a>
                 
-                <a 
-                  href="#" // Placeholder for Cashfree link
-                  target="_blank"
-                  rel="noopener noreferrer"
+                <button 
+                  onClick={() => setIsDonateModalOpen(true)}
                   className="flex items-center justify-center gap-3 w-full bg-neutral-900 hover:bg-neutral-800 text-white font-medium py-4 px-6 rounded-2xl transition-all duration-300 hover:-translate-y-1 border border-neutral-800"
                 >
                   <Coffee size={20} className="text-white" />
                   Buy me a Coffee
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      )}
+      {/* Donate Modal */}
+      {isDonateModalOpen && (
+        <div className="fixed inset-0 z-[60] flex items-center justify-center p-4">
+          <div 
+            className="absolute inset-0 bg-black/80 backdrop-blur-sm transition-opacity"
+            onClick={() => setIsDonateModalOpen(false)}
+          />
+          
+          <div className="relative w-full max-w-md bg-black border border-neutral-800 rounded-3xl shadow-2xl p-6 sm:p-8 overflow-hidden transform transition-all animate-in zoom-in-95 duration-200">
+            {/* Modal close button */}
+            <button 
+              onClick={() => setIsDonateModalOpen(false)}
+              className="absolute top-3 right-3 sm:top-4 sm:right-4 text-neutral-400 hover:text-white transition-colors p-2 rounded-full hover:bg-neutral-900"
+            >
+              <X size={20} />
+            </button>
+
+            <div className="flex flex-col items-center text-center mt-4">
+              <div className="w-16 h-16 bg-neutral-900 rounded-2xl flex items-center justify-center mb-6 border border-neutral-800">
+                <Coffee size={32} className="text-white" />
+              </div>
+              
+              <h2 className="text-2xl font-bold text-white mb-2">Support CleanTube</h2>
+              <p className="text-neutral-400 mb-6">
+                Scan with any UPI App (GPay, PhonePe, Paytm) to support the project!
+              </p>
+
+              <div className="bg-white p-4 rounded-2xl mb-6 shadow-inner">
+                <img 
+                  src="https://api.qrserver.com/v1/create-qr-code/?size=200x200&data=upi%3A%2F%2Fpay%3Fpa%3Dnormie69%40ptyes%26pn%3DCleanTube%2520Developer%26cu%3DINR" 
+                  alt="UPI QR Code" 
+                  className="mx-auto rounded-lg w-[160px] h-[160px] sm:w-[200px] sm:h-[200px]" 
+                />
+              </div>
+
+              <div className="flex flex-col w-full gap-4 md:hidden">
+                <a 
+                  href="upi://pay?pa=normie69@ptyes&pn=CleanTube%20Developer&cu=INR"
+                  className="flex items-center justify-center gap-3 w-full bg-white text-black hover:bg-neutral-200 font-medium py-4 px-6 rounded-2xl transition-all duration-300 hover:-translate-y-1"
+                >
+                  📱 Open UPI App (Mobile Only)
                 </a>
               </div>
             </div>
