@@ -495,10 +495,18 @@ eas build:configure`}</code>
                 />
               </div>
 
-              <div className="flex flex-col w-full gap-4 md:hidden">
+              <div className="flex flex-col w-full gap-4 md:hidden relative">
+                {/* Click Here Arrow */}
+                <div className="absolute -top-12 -right-4 w-16 h-16 pointer-events-none animate-bounce">
+                  <img 
+                    src="/clickhere.png" 
+                    alt="Click here" 
+                    className="w-full h-full object-contain -rotate-12"
+                  />
+                </div>
                 <a 
                   href="upi://pay?pa=paytm.s36o6vz@pty&pn=CleanTube%20Developer&cu=INR"
-                  className="flex items-center justify-center gap-3 w-full bg-white text-black hover:bg-neutral-200 font-medium py-4 px-6 rounded-2xl transition-all duration-300 hover:-translate-y-1"
+                  className="flex items-center justify-center gap-3 w-full bg-white text-black hover:bg-neutral-200 font-medium py-4 px-6 rounded-2xl transition-all duration-300 hover:-translate-y-1 relative z-10"
                 >
                   📱 Open UPI App (Mobile Only)
                 </a>
