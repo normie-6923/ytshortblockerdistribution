@@ -489,7 +489,7 @@ eas build:configure`}</code>
 
               <div className="bg-white p-4 rounded-2xl mb-6 shadow-inner">
                 <img 
-                  src="https://api.qrserver.com/v1/create-qr-code/?size=200x200&data=upi%3A%2F%2Fpay%3Fpa%3Dnormie69%40ptyes%26pn%3DCleanTube%2520Developer%26cu%3DINR" 
+                  src="https://api.qrserver.com/v1/create-qr-code/?size=200x200&data=upi%3A%2F%2Fpay%3Fpa%3Dpaytm.s36o6vz%40pty%26pn%3DCleanTube%2520Developer%26cu%3DINR" 
                   alt="UPI QR Code" 
                   className="mx-auto rounded-lg w-[160px] h-[160px] sm:w-[200px] sm:h-[200px]" 
                 />
@@ -497,7 +497,7 @@ eas build:configure`}</code>
 
               <div className="flex flex-col w-full gap-4 md:hidden">
                 <a 
-                  href="upi://pay?pa=normie69@ptyes&pn=CleanTube%20Developer&cu=INR"
+                  href="upi://pay?pa=paytm.s36o6vz@pty&pn=CleanTube%20Developer&cu=INR"
                   className="flex items-center justify-center gap-3 w-full bg-white text-black hover:bg-neutral-200 font-medium py-4 px-6 rounded-2xl transition-all duration-300 hover:-translate-y-1"
                 >
                   📱 Open UPI App (Mobile Only)
