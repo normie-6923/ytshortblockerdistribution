@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { Download, Coffee, X, Smartphone, Code2, ShieldCheck, Zap } from 'lucide-react';
+import { Download, Coffee, X, Smartphone } from 'lucide-react';
 
 const reactNativeCode = `import React, { useRef, useState, useEffect } from 'react';
 import { StyleSheet, StatusBar, BackHandler, Platform, View } from 'react-native';
