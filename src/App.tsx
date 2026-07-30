@@ -452,8 +452,7 @@ eas build:configure`}</code>
 
               <div className="flex flex-col w-full gap-4">
                 <a 
-                  href="/app-release.apk" 
-                  download="CleanTube.apk"
+                  href="https://github.com/normie-6923/ytshortblockerdistribution/releases/download/v1.0.0/app-release.apk"
                   className="flex items-center justify-center gap-3 w-full bg-red-600 hover:bg-red-700 text-white font-medium py-4 px-6 rounded-2xl transition-all duration-300 hover:scale-[1.02] active:scale-[0.98] shadow-lg shadow-red-600/20"
                 >
                   <Download size={20} />
