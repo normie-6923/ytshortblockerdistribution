@@ -460,28 +460,30 @@ eas build:configure`}</code>
                 Scan with any UPI App (GPay, PhonePe, Paytm) to support the project!
               </p>
 
-              <div className="bg-white p-4 rounded-2xl mb-6 shadow-inner">
-                <img 
-                  src="https://api.qrserver.com/v1/create-qr-code/?size=200x200&data=upi%3A%2F%2Fpay%3Fpa%3Dpaytm.s36o6vz%40pty%26pn%3DCleanTube%2520Developer%26cu%3DINR" 
-                  alt="UPI QR Code" 
-                  className="mx-auto rounded-lg w-[160px] h-[160px] sm:w-[200px] sm:h-[200px]" 
-                />
-              </div>
+              <div className="flex flex-col items-center relative w-full">
+                <div className="bg-white p-4 rounded-2xl mb-1 shadow-inner relative z-10">
+                  <img 
+                    src="https://api.qrserver.com/v1/create-qr-code/?size=200x200&data=upi%3A%2F%2Fpay%3Fpa%3Dpaytm.s36o6vz%40pty%26pn%3DCleanTube%2520Developer%26cu%3DINR" 
+                    alt="UPI QR Code" 
+                    className="mx-auto rounded-lg w-[160px] h-[160px] sm:w-[200px] sm:h-[200px]" 
+                  />
+                </div>
 
-              <div className="flex flex-col w-full items-center md:hidden">
-                <a 
-                  href="upi://pay?pa=paytm.s36o6vz@pty&pn=CleanTube%20Developer&mc=5499&mode=02&tn=CleanTube%20Donation&cu=INR"
-                  className="flex items-center justify-center gap-3 w-full bg-white text-black hover:bg-neutral-200 font-medium py-4 px-6 rounded-2xl transition-all duration-300 hover:-translate-y-1 relative z-10"
-                >
-                  📱 Open UPI App (Mobile Only)
-                </a>
                 {/* Click Here Arrow */}
-                <div className="w-20 h-20 pointer-events-none animate-bounce mt-4">
+                <div className="w-16 h-16 sm:w-20 sm:h-20 pointer-events-none animate-bounce -mt-3 relative z-20">
                   <img 
                     src="/clickhere.png" 
-                    alt="Click here" 
+                    alt="Scan here" 
                     className="w-full h-full object-contain -rotate-12"
                   />
+                </div>
+
+                {/* Tips for phone users */}
+                <div 
+                  className="mt-1 text-[13px] text-neutral-300 md:hidden leading-relaxed text-center px-2" 
+                  style={{ fontFamily: "'Comic Sans MS', 'Chalkboard SE', 'Comic Neue', cursive" }}
+                >
+                  *Tips: If on phone, take a screenshot, open your payment app, click on scan and upload the image from your gallery.
                 </div>
               </div>
             </div>
