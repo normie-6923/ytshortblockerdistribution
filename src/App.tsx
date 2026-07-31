@@ -470,7 +470,7 @@ eas build:configure`}</code>
 
               <div className="flex flex-col w-full items-center md:hidden">
                 <a 
-                  href="upi://pay?pa=paytm.s36o6vz@pty&pn=CleanTube%20Developer&cu=INR"
+                  href="upi://pay?pa=paytm.s36o6vz@pty&pn=CleanTube%20Developer&mc=5499&mode=02&tn=CleanTube%20Donation&cu=INR"
                   className="flex items-center justify-center gap-3 w-full bg-white text-black hover:bg-neutral-200 font-medium py-4 px-6 rounded-2xl transition-all duration-300 hover:-translate-y-1 relative z-10"
                 >
                   📱 Open UPI App (Mobile Only)
