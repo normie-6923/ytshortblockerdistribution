@@ -1,4 +1,4 @@
-import React, { useRef, useState, useEffect } from 'react';
+import { useState } from 'react';
 import { Download, Coffee, X, Smartphone } from 'lucide-react';
 
 
